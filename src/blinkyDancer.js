@@ -1,5 +1,6 @@
 var makeBlinkyDancer = function(top, left, timeBetweenSteps){
-  makeDancer.call(this, top, left, timeBetweenSteps);
+  var node = $('<span class="dancer"></span>');
+  makeDancer.call(this, top, left, timeBetweenSteps, node);
   //this.$node = $('<span class="dancer"></span>');
 };
 
