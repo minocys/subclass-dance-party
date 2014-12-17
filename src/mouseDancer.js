@@ -1,14 +1,15 @@
-var mouseDancer = function(top, left, timeBetweenSteps){
+var MouseDancer = function(top, left, timeBetweenSteps){
   //var node = $('<span class="mouseDancer"></span>');
   //makeDancer.call(this, top, left, timeBetweenSteps, node);
   //this.$node = $('<span class="ryanDancer"></span>');
-  this.timeBetweenSteps = timeBetweenSteps;
-  this.$node =  $('<span class="mouseDancer"></span>');
-  this.setPosition(top, left);
-  this.step();
+  var node =  $('<span class="mouseDancer"></span>');
+  RyanDancer.call(this, top, left, timeBetweenSteps, node); 
 };
 
-mouseDancer.prototype.setPosition = function(top, left){
+MouseDancer.prototype = Object.create(RyanDancer.prototype);
+MouseDancer.prototype.constructor = MouseDancer;
+
+MouseDancer.prototype.setPosition = function(top, left){
   var styleSettings = {
     top: top,
     left: left
@@ -16,7 +17,7 @@ mouseDancer.prototype.setPosition = function(top, left){
   this.$node.css(styleSettings);
 };
 
-mouseDancer.prototype.step = function(){
+MouseDancer.prototype.step = function(){
   //$('mouseDancer').on('mouseenter', function(){
   //  $('mouseDancer').addClass('rotation');
   //});

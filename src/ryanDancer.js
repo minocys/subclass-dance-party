@@ -1,13 +1,13 @@
-var makeRyanDancer = function(top, left, timeBetweenSteps){
-  var node = $('<span class="ryanDancer"></span>');
-  makeDancer.call(this, top, left, timeBetweenSteps, node);
+var RyanDancer = function(top, left, timeBetweenSteps, node){
+  var node = node || $('<span class="ryanDancer"></span>');
+  Dancer.call(this, top, left, timeBetweenSteps, node);
   //this.$node = $('<span class="ryanDancer"></span>');
 };
 
 
-makeRyanDancer.prototype = Object.create(makeDancer.prototype);
+RyanDancer.prototype = Object.create(Dancer.prototype);
 
-makeRyanDancer.prototype.step = function(){
+RyanDancer.prototype.step = function(){
   //makeDancer.prototype.step.call(this);
   this.$node.fadeIn(900);
 
