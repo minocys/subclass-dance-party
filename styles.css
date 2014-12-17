@@ -122,3 +122,11 @@ body, a:link, a:visited, a:active{
   background-image: url('./src/mouseDancer.gif');
   background-position: center;
 }
+
+.rotation {
+  transform : rotate(180deg);
+}
+
+.invis{
+  opacity: 0;
+}

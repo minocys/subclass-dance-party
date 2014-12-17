@@ -9,6 +9,6 @@ makeRyanDancer.prototype = Object.create(makeDancer.prototype);
 
 makeRyanDancer.prototype.step = function(){
   //makeDancer.prototype.step.call(this);
+  this.$node.fadeIn(900);
 
-  this.$node.fadeIn();
 };
