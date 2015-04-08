@@ -53,7 +53,7 @@ $(document).ready(function(){
 
   $('body').on('mouseleave', 'span.mouseDancer', function() {
    $('.mouseDancer').removeClass('rotation');
-   });
+  });
 
 
 });
